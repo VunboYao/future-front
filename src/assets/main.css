@@ -1,0 +1,40 @@
+@import 'variable.css';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+
+#app {
+  height: 100%;
+  color: var(--fontColor);
+}
+
+.x {
+  padding: 20px;
+  color: #333;
+  background: #fff;
+  border-radius: var(--radius);
+}
+
+
+.mt10 {
+  margin-top: 10px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.ml10 {
+  margin-left: 10px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
