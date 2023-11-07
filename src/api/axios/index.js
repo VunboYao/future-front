@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { ElLoading, ElMessage } from 'element-plus'
-import { BASE_URL, PAGE_NAME } from '@/assets/constant'
+import { PAGE_NAME } from '@/assets/constant'
 import router from '@/router/index'
 import { useStoreToken } from '@/stores/useStoreToken'
 
@@ -10,7 +10,7 @@ let loadingInstance
  * 创建axios实例
  */
 const instance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: import.meta.env.VITE_BASE_URL,
   timeout: 60 * 1000,
 })
 

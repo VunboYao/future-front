@@ -20,6 +20,3 @@ export const LOCAL_KEY = {
   USER_LOGIN: 'user_login_data',
   USER_INFO: 'user_info',
 }
-
-// 服务地址
-export const BASE_URL = 'http://localhost:8001'
