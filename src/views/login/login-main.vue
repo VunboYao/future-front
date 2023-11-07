@@ -11,7 +11,7 @@ const { name, password, isCanLogin, isRememberUser, onLogin } = await useLogin()
         alt="login"
         class="avatar"
       >
-      <span class="title">登录用户中心</span>
+      <span class="title">登录用户中心～</span>
       <el-input
         v-model="name"
         size="large"
