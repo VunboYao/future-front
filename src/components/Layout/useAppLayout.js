@@ -1,4 +1,4 @@
-import { BASE_URL, PAGE_NAME } from '@/assets/constant'
+import { PAGE_NAME } from '@/assets/constant'
 import { useUserInfo } from '@/stores/useUserInfo'
 
 export const useAppLayout = async function() {
@@ -6,7 +6,7 @@ export const useAppLayout = async function() {
   const { getUserInfo } = useUserInfo()
 
   // 用户头像地址
-  const avatarUrl = `${BASE_URL}/file/avatar/${getUserInfo.id}`
+  const avatarUrl = `${import.meta.env.VITE_BASE_URL}/file/avatar/${getUserInfo.id}`
   const menuMap = [
     { title: '管理中心', code: 'center', icon: 'ChromeFilled' },
     { title: '发布笔记', code: 'publish', icon: 'Operation' },
