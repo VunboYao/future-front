@@ -6,7 +6,7 @@ export const useAppLayout = async function() {
   const { getUserInfo } = useUserInfo()
 
   // 用户头像地址
-  const avatarUrl = `${import.meta.env.VITE_BASE_URL}/file/avatar/${getUserInfo.id}`
+  const avatarUrl = getUserInfo.avatar_url
   const menuMap = [
     { title: '管理中心', code: 'center', icon: 'ChromeFilled' },
     { title: '发布笔记', code: 'publish', icon: 'Operation' },

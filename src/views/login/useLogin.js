@@ -44,6 +44,7 @@ export const useLogin = async() => {
     saveUserInfo({
       name: res.name,
       id: res.id,
+      avatar_url: res.avatar_url,
     })
 
     // 前往主页

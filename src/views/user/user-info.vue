@@ -1,8 +1,10 @@
 <script setup>
 import { uploadAvatar } from '@/api/file'
+import { useUserInfo } from '@/stores/useUserInfo'
 
 const imageUrl = ref('')
 const avatar = ref()
+const { saveUserInfo } = useUserInfo()
 
 // 监听选择头像
 function onChange(file) {
@@ -15,7 +17,10 @@ async function onUpload() {
   const formData = new FormData()
   formData.append('avatar', avatar.value)
 
-  await uploadAvatar(formData)
+  const res = await uploadAvatar(formData)
+  saveUserInfo({
+    avatar_url: res,
+  })
   imageUrl.value = ''
   location.reload()
 }
